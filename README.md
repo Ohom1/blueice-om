@@ -79,6 +79,7 @@ Email: omkarnathdubey127@gmail.com
 LinkedIn: [Ohom Dubey](https://www.linkedin.com/in/ohom-dubey-23055917b/)
 
 Instagram: [@er_shub_h](https://www.instagram.com/er_shub_h/?next=%2F)
+
 Thank you for your interest in Blue Ice! We look forward to your engagement and feedback!
 
 vbnet
