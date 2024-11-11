@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Color Grading Course</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Checkout </title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body>
+    
+    <!-- Checkout Section -->
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <h2 class="text-center">Checkout</h2>
+                <form id="checkoutForm">
+                    <!-- Customer Name -->
+                    <div class="mb-3">
+                        <label for="customerName" class="form-label">Your Name</label>
+                        <input type="text" class="form-control" id="customerName" placeholder="Enter your name" required>
+                    </div>
+    
+                    <!-- Email -->
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                    </div>
+    
+                    <!-- Contact Number -->
+                    <div class="mb-3">
+                        <label for="contactNumber" class="form-label">Contact Number</label>
+                        <input type="text" class="form-control" id="contactNumber" placeholder="Enter your contact number" required>
+                    </div>
+    
+                    <!-- Address -->
+                    <div class="mb-3">
+                        <label for="address" class="form-label">Address</label>
+                        <textarea class="form-control" id="address" rows="3" placeholder="Enter your address" required></textarea>
+                    </div>
+    
+                    <!-- Product Name -->
+                    <div class="mb-3">
+                        <label for="productName" class="form-label">Course Name</label>
+                        <input type="text" class="form-control" id="productName" value="Color Grading Course" required>
+                    </div>
+    
+                    <!-- Payment Mode -->
+                    <div class="mb-3">
+                        <label for="paymentMode" class="form-label">Payment Mode</label>
+                        <select class="form-select" id="paymentMode" required>
+                            <option value="Cash on Delivery" selected>Cash on Delivery</option>
+                        </select>
+                    </div>
+    
+                    <!-- Delivery Mode -->
+                    <div class="mb-3">
+                        <label for="deliveryMode" class="form-label">Delivery Mode</label>
+                        <input type="text" class="form-control" id="deliveryMode" value="Online" readonly>
+                    </div>
+    
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn btn-success w-100">Confirm Purchase</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Confirmation Modal -->
+    <div class="modal fade" id="purchaseConfirmationModal" tabindex="-1" aria-labelledby="purchaseConfirmationModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="purchaseConfirmationModalLabel">Purchase Confirmation</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Your purchase has been successfully completed. Thank you for enrolling in the Color Grading Course!</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" onclick="window.location.href='index.html'">Go Back to Homepage</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- JavaScript for Form Submission and Modal Trigger -->
+    <script>
+        document.getElementById('checkoutForm').addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent the default form submission
+    
+            // Trigger the confirmation modal
+            var myModal = new bootstrap.Modal(document.getElementById('purchaseConfirmationModal'));
+            myModal.show();
+        });
+    </script>
+    
+    </body>
+    </html>
+    
+
+<!-- Confirmation Modal -->
+<div class="modal fade" id="purchaseConfirmationModal" tabindex="-1" aria-labelledby="purchaseConfirmationModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="purchaseConfirmationModalLabel">Purchase Confirmation</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Your purchase has been successfully completed. Thank you for enrolling in the Color Grading Course!</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" onclick="window.location.href='index.html'">Go Back to Homepage</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS and jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Confirmation Script -->
+<script>
+    $(document).ready(function () {
+        $('#checkoutForm').on('submit', function (e) {
+            e.preventDefault();
+            // Show the confirmation modal
+            $('#purchaseConfirmationModal').modal('show');
+        });
+    });
+</script>
+
+</body>
+</html>
